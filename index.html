@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Terima Kasih Aqiqah Muhammad Hasby</title>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600;700&family=Pacifico&family=Nunito:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <style>
+        :root {
+            --soft-blue: #eef9ff;
+            --ocean-blue: #0ea5e9;
+            --cream: #fffef2;
+            --white: #ffffff;
+            --text-dark: #334155;
+            --love: #f43f5e;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; -webkit-tap-highlight-color: transparent; }
+
+        body {
+            font-family: 'Quicksand', sans-serif;
+            background-color: var(--soft-blue);
+            color: var(--text-dark);
+            overflow-x: hidden;
+        }
+
+        /* Gate / Pintu Masuk */
+        #gate {
+            position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+            background: linear-gradient(135deg, var(--soft-blue) 0%, var(--cream) 100%);
+            z-index: 9999; display: flex; flex-direction: column;
+            align-items: center; justify-content: center; text-align: center;
+            padding: 20px; transition: transform 1s cubic-bezier(0.77, 0, 0.175, 1);
+        }
+
+        /* Dekorasi Melayang */
+        .decor {
+            position: fixed; pointer-events: none; z-index: 1; opacity: 0.6;
+            animation: floatAni 8s ease-in-out infinite;
+        }
+        @keyframes floatAni {
+            0%, 100% { transform: translateY(0) rotate(0deg); }
+            50% { transform: translateY(-40px) rotate(15deg); }
+        }
+
+        .container {
+            max-width: 480px; margin: 0 auto;
+            background: var(--white);
+            position: relative; z-index: 10;
+            box-shadow: 0 0 50px rgba(0,0,0,0.05);
+        }
+
+        /* Foto Full Background */
+        .hero {
+            width: 100%; height: 100vh; position: relative; overflow: hidden;
+        }
+        .hero-img {
+            width: 100%; height: 100%; object-fit: cover;
+            filter: brightness(0.9);
+        }
+        .hero-overlay {
+            position: absolute; bottom: 0; width: 100%; height: 50%;
+            background: linear-gradient(to top, var(--white) 20%, transparent);
+        }
+
+        .section { padding: 60px 25px; text-align: center; position: relative; }
+        .title-font { font-family: 'Pacifico', cursive; color: var(--ocean-blue); }
+
+        /* Card System */
+        .cute-card {
+            background: #fff; border-radius: 35px; padding: 30px 20px;
+            margin: 25px 0; border: 2px solid #f0f9ff;
+            box-shadow: 0 15px 40px rgba(14, 165, 233, 0.1);
+        }
+
+        .dua-container {
+            background: var(--cream); border-radius: 25px; padding: 25px;
+            text-align: left; margin: 20px 0; border-left: 10px solid var(--ocean-blue);
+            font-style: italic; font-size: 0.95rem;
+        }
+
+        /* Buttons */
+        .btn-action {
+            display: flex; align-items: center; justify-content: center;
+            width: 100%; padding: 20px; border-radius: 25px;
+            text-decoration: none; font-weight: 700; margin-bottom: 15px;
+            transition: all 0.3s ease; border: none; font-size: 1.1rem;
+            cursor: pointer;
+        }
+        .btn-blue { background: var(--ocean-blue); color: white; box-shadow: 0 10px 20px rgba(14, 165, 233, 0.3); }
+        .btn-rose { background: var(--love); color: white; box-shadow: 0 10px 20px rgba(244, 63, 94, 0.3); }
+        .btn-action:active { transform: scale(0.95); }
+
+        /* Music control */
+        .music-fab {
+            position: fixed; top: 20px; right: 20px; z-index: 1000;
+            width: 48px; height: 48px; background: white; border-radius: 50%;
+            display: flex; align-items: center; justify-content: center;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.1); color: var(--ocean-blue);
+        }
+
+        .thanks-list {
+            text-align: left; margin-top: 20px;
+        }
+        .thanks-item {
+            display: flex; align-items: flex-start; margin-bottom: 15px; font-size: 0.9rem;
+        }
+        .thanks-item i { color: var(--ocean-blue); margin-right: 12px; margin-top: 4px; }
+
+        /* Modal Video */
+        .v-modal {
+            display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+            background: #000; z-index: 10001; align-items: center; justify-content: center;
+        }
+        .v-close { position: absolute; top: 30px; right: 25px; color: white; font-size: 3rem; }
+
+        footer { padding: 40px 20px; font-size: 0.8rem; color: #94a3b8; }
+    </style>
+</head>
+<body>
+
+    <audio id="audioBg" loop>
+        <source src="music1.mp3" type="audio/mpeg">
+    </audio>
+
+    <div id="gate">
+        <div data-aos="zoom-in">
+            <div style="background: white; padding: 25px; border-radius: 50%; display: inline-block; margin-bottom: 25px; box-shadow: 0 15px 35px rgba(0,0,0,0.05);">
+                <span style="font-size: 50px;">🍼</span>
+            </div>
+            <p style="text-transform: uppercase; letter-spacing: 5px; font-size: 0.8rem; color: #64748b; margin-bottom: 10px;">Acara Aqiqah</p>
+            <h1 class="title-font" style="font-size: 2.5rem; margin-bottom: 30px;">Muhammad Hasby</h1>
+            <button class="btn-action btn-blue" style="width: auto; padding: 15px 40px;" onclick="unlock()">
+                <i class="fas fa-heart" style="margin-right: 10px;"></i> Buka Ucapan
+            </button>
+        </div>
+    </div>
+
+    <div class="music-fab" onclick="togglePlay()">
+        <i id="mIcon" class="fas fa-music"></i>
+    </div>
+
+    <span class="decor" style="top:10%; left:5%; font-size: 30px;">☁️</span>
+    <span class="decor" style="top:45%; right:8%; font-size: 25px; animation-delay: 2s;">✨</span>
+    <span class="decor" style="bottom:15%; left:10%; font-size: 28px; animation-delay: 4s;">🍼</span>
+
+    <div class="container">
+        <div class="hero">
+            <img src="foto1.jpg" alt="Hasby" class="hero-img">
+            <div class="hero-overlay"></div>
+            <div style="position: absolute; bottom: 30px; width: 100%; text-align: center; padding: 0 20px;">
+                <h1 class="title-font" style="font-size: 3.2rem; text-shadow: 0 5px 15px rgba(255,255,255,0.9);">Muhammad Hasby</h1>
+            </div>
+        </div>
+
+        <section class="section">
+            <div data-aos="fade-up">
+                <h2 class="title-font" style="font-size: 2.5rem; margin-bottom: 15px;">Alhamdulillah</h2>
+                <p style="font-weight: 700; color: var(--ocean-blue); margin-bottom: 10px;">Segala Puji Bagi Allah SWT</p>
+                <p style="font-size: 1.1rem; color: #1e293b; font-style: italic; margin-bottom: 25px;">"Allahumma Sholli 'Ala Sayyidina Muhammad"</p>
+                <p style="font-size: 0.95rem; color: #64748b;">
+                    Terima kasih ya Allah, atas kelancaran acara Aqiqah putra pertama kami pada hari <b>Minggu, 10 Mei 2026</b> di Majlis Taklim Umm al Qura Sentul.
+                </p>
+            </div>
+
+            <div class="cute-card" data-aos="zoom-in">
+                <p style="font-weight: 700; color: var(--ocean-blue); margin-bottom: 15px; text-transform: uppercase; font-size: 0.8rem;">Putra Tercinta Dari:</p>
+                <p style="font-size: 1.2rem; font-weight: 700;">Bpk. Bambang Hadi Purnomo<br>& Ibu Hasna Mahdavia</p>
+                
+                <div style="margin: 25px 0; height: 1px; background: linear-gradient(to right, transparent, #e2e8f0, transparent);"></div>
+                
+                <div style="font-size: 0.9rem; line-height: 1.8;">
+                    <p><b>Cucu Dari:</b></p>
+                    <p>Abah Imam Suyadi & Mbah Jamilah<br><small>(Orang tua dari laki-laki)</small></p>
+                    <p style="margin-top: 10px;">Kakek H. Edi Mahdi Jazuly & Nenek Siti Zubaedah<br><small>(Orang tua dari perempuan)</small></p>
+                </div>
+            </div>
+        </section>
+
+        <section class="section" style="background: var(--cream); border-radius: 60px 60px 0 0;">
+            <h3 class="title-font" style="font-size: 2rem; margin-bottom: 25px;" data-aos="fade-up">Untaian Doa</h3>
+            
+            <div class="dua-container" data-aos="fade-right">
+                <p><b>Doa untuk Ananda Hasby:</b><br>
+                "Semoga tumbuh menjadi anak yang sholeh, cerdas, berbakti kepada orang tua, serta menjadi penyejuk hati keluarga di dunia dan akhirat."</p>
+            </div>
+
+            <div class="dua-container" style="border-left-color: var(--love);" data-aos="fade-left">
+                <p><b>Doa untuk Ibu Hasna:</b><br>
+                "Semoga Allah berikan kesehatan prima, keberkahan, dan kemudahan dalam mendidik serta membimbing sang buah hati."</p>
+            </div>
+
+            <div class="dua-container" style="border-left-color: #facc15;" data-aos="fade-right">
+                <p><b>Doa untuk Ayah Bambang:</b><br>
+                "Semoga senantiasa dalam lindungan Allah, dimudahkan rezekinya, dan menjadi imam yang bijaksana bagi keluarga."</p>
+            </div>
+        </section>
+
+        <section class="section">
+            <h3 class="title-font" style="font-size: 2.2rem; margin-bottom: 20px;">Terima Kasih</h3>
+            <p style="margin-bottom: 25px; font-size: 0.95rem;">Jazakumullah Khairan Katsiran kami ucapkan kepada seluruh pihak yang telah membantu kelancaran acara ini:</p>
+
+            <div class="cute-card" data-aos="fade-up">
+                <div class="thanks-list">
+                    <div class="thanks-item">
+                        <i class="fas fa-star"></i>
+                        <p><b>Seluruh Hadirin</b> atas kehadiran dan doa tulusnya.</p>
+                    </div>
+                    <div class="thanks-item">
+                        <i class="fas fa-star"></i>
+                        <p><b>Para Tetangga</b> yang telah membantu persiapan acara.</p>
+                    </div>
+                    <div class="thanks-item">
+                        <i class="fas fa-heart"></i>
+                        <p><b>Keluarga Besar H. Edi Mahdi Jazuly:</b> Terima kasih Kakek, Nenek, Kaka, Adik, Bibi, Ua, dan Mamang dari Teh Hasna.</p>
+                    </div>
+                    <div class="thanks-item">
+                        <i class="fas fa-heart"></i>
+                        <p><b>Keluarga Besar Aki Jawarna:</b> Terima kasih Mbah, Abah, Adik-adik tampan, serta Bi Acih / Enin Tarsih.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section" style="background: var(--soft-blue);">
+            <h3 class="title-font" style="font-size: 2rem; margin-bottom: 25px;">Dokumentasi</h3>
+            
+            <button class="btn-action btn-rose" onclick="openVid()">
+                <i class="fas fa-play-circle" style="margin-right: 15px; font-size: 1.5rem;"></i> Lihat Video Dokumentasi
+            </button>
+            
+            <a href="https://maps.app.goo.gl/Yzmka85GJmhjMQpK6" target="_blank" class="btn-action btn-blue">
+                <i class="fas fa-map-marked-alt" style="margin-right: 15px; font-size: 1.5rem;"></i> Lokasi Majlis Taklim
+            </a>
+        </section>
+
+        <footer class="section">
+            <p style="font-weight: 700; color: var(--ocean-blue); margin-bottom: 10px;">Keluarga Besar Muhammad Hasby</p>
+            <p>Sentul, Kec. Babakan Madang, Kab. Bogor</p>
+            <div style="margin-top: 30px; font-size: 0.75rem; opacity: 0.6;">
+                "Jazakumullah Khairan Katsiran"
+            </div>
+        </footer>
+    </div>
+
+    <div id="vModal" class="v-modal">
+        <span class="v-close" onclick="closeVid()">×</span>
+        <video id="vidPlayer" width="90%" controls playsinline>
+            <source src="vidio1.mp4" type="video/mp4">
+        </video>
+    </div>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({ duration: 1000, once: true });
+
+        const audio = document.getElementById('audioBg');
+        const mIcon = document.getElementById('mIcon');
+        const gate = document.getElementById('gate');
+
+        function unlock() {
+            gate.style.transform = 'translateY(-100%)';
+            audio.play().catch(() => console.log("Audio manual play required."));
+            mIcon.classList.add('fa-spin');
+        }
+
+        function togglePlay() {
+            if (audio.paused) {
+                audio.play();
+                mIcon.classList.add('fa-spin');
+            } else {
+                audio.pause();
+                mIcon.classList.remove('fa-spin');
+            }
+        }
+
+        function openVid() {
+            document.getElementById('vModal').style.display = 'flex';
+            document.getElementById('vidPlayer').play();
+            audio.pause();
+        }
+
+        function closeVid() {
+            document.getElementById('vModal').style.display = 'none';
+            document.getElementById('vidPlayer').pause();
+            if (!audio.paused || mIcon.classList.contains('fa-spin')) audio.play();
+        }
+    </script>
+</body>
+</html>
